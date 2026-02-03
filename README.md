@@ -1,4 +1,5 @@
 🧬 Memory: Mujeres en la Ciencia
+
 Juego de memoria interactivo para celebrar el Día Internacional de la Mujer y la Niña en la Ciencia (11 de febrero).
 
 
@@ -12,17 +13,14 @@ Encuentra todas las parejas para ganar
 
 
 HTML5
-CSS3 (animaciones, gradientes, diseño responsive)
-JavaScript vanilla (sin dependencias)
-Google Fonts (Fredoka, Nunito)
-Vercel Analytics
-
-
+* CSS3 (animaciones, gradientes, diseño responsive)
+* JavaScript vanilla (sin dependencias)
+* Google Fonts (Fredoka, Nunito)
+* Vercel Analytics
 
 📄 Licencia
 Este proyecto es de uso libre para fines educativos.
 
 👤 Autor
-Hecho con 💜 por Manu Quiroga
+Manu Quiroga
 
-Fundación Secretariado Gitano · 2026
