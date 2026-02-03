@@ -301,7 +301,15 @@ function handleInteraction(e) {
     e.preventDefault();
     const card = e.target.closest('.card');
     if (card && card.dataset.index !== undefined) {
-        flipCard(parseInt(card.dataset.index));
+        const index = parseInt(card.dataset.index);
+        const cardData = cards[index];
+
+        // Si la tarjeta ya está emparejada, mostrar la info de la científica
+        if (cardData.matched) {
+            showScientistInfo(cardData.scientist, false);
+        } else {
+            flipCard(index);
+        }
     }
 }
 
@@ -341,7 +349,15 @@ gameBoard.addEventListener('touchstart', handleInteraction, { passive: false });
 gameBoard.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
     if (card && card.dataset.index !== undefined) {
-        flipCard(parseInt(card.dataset.index));
+        const index = parseInt(card.dataset.index);
+        const cardData = cards[index];
+
+        // Si la tarjeta ya está emparejada, mostrar la info de la científica
+        if (cardData.matched) {
+            showScientistInfo(cardData.scientist, false);
+        } else {
+            flipCard(index);
+        }
     }
 });
 
@@ -366,3 +382,6 @@ document.addEventListener('touchend', (e) => {
 // ==========================================================================
 
 initGame();
+
+// Mostrar el modal de "Cómo jugar" al cargar la página
+infoModal.classList.add('active');
