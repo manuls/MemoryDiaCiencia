@@ -635,80 +635,81 @@ Copiar
     </footer>
 
     <script>
-        const scientists = [
-            {
-                id: 1,
-                name: "Ada Lovelace",
-                dates: "1815 - 1852",
-                field: "Matemáticas e Informática",
-                bio: "Matemática británica, considerada la primera programadora de la historia. Hija del poeta Lord Byron, trabajó con Charles Babbage en la Máquina Analítica y vio su potencial más allá del cálculo numérico.",
-                achievement: "Escribió el primer algoritmo diseñado para ser procesado por una máquina, anticipando la era de los ordenadores más de un siglo antes de que existieran.",
-                image: "images/Ada_Lovelace.png"
-            },
-            {
-                id: 2,
-                name: "Rosalind Franklin",
-                dates: "1920 - 1958",
-                field: "Química y Cristalografía",
-                bio: "Química británica cuyo trabajo fue fundamental para comprender la estructura del ADN. Experta en cristalografía de rayos X, su trabajo fue esencial pero no reconocido en vida.",
-                achievement: "Su famosa 'Fotografía 51' fue clave para descubrir la estructura de doble hélice del ADN, uno de los descubrimientos más importantes del siglo XX.",
-                image: "images/Rosalind.png"
-            },
-            {
-                id: 3,
-                name: "Hedy Lamarr",
-                dates: "1914 - 2000",
-                field: "Ingeniería e Invención",
-                bio: "Actriz e inventora austríaca-estadounidense. Además de su carrera en Hollywood, fue una brillante inventora autodidacta que desarrolló tecnología militar durante la Segunda Guerra Mundial.",
-                achievement: "Co-inventó el 'salto de frecuencia', tecnología base del WiFi, Bluetooth y GPS que usamos hoy en día. Fue reconocida con el Premio Pioneer de la Electronic Frontier Foundation.",
-                image: "images/HedyLamar.png"
-            },
-            {
-                id: 4,
-                name: "Jane Goodall",
-                dates: "1934 - presente",
-                field: "Primatología y Conservación",
-                bio: "Primatóloga británica, la mayor experta mundial en chimpancés. Ha dedicado más de 60 años al estudio y conservación de estos animales en Tanzania, revolucionando nuestra comprensión de los primates.",
-                achievement: "Descubrió que los chimpancés fabrican y usan herramientas, cambiando para siempre nuestra comprensión de lo que nos diferencia como humanos.",
-                image: "images/JaneGodall.png"
-            },
-            {
-                id: 5,
-                name: "Katherine Johnson",
-                dates: "1918 - 2020",
-                field: "Matemáticas y Aeronáutica",
-                bio: "Matemática afroamericana que trabajó en la NASA superando barreras raciales y de género. Sus cálculos fueron esenciales para las primeras misiones espaciales de Estados Unidos.",
-                achievement: "Calculó las trayectorias del primer vuelo espacial estadounidense y de la misión Apollo 11 que llevó al ser humano a la Luna.",
-                image: "images/KatherineJohnson.png"
-            },
-            {
-                id: 6,
-                name: "Margarita Salas",
-                dates: "1938 - 2019",
-                field: "Bioquímica y Biología Molecular",
-                bio: "Científica española, pionera de la biología molecular en España. Discípula de Severo Ochoa, dedicó su vida a la investigación del ADN y formó a generaciones de científicos españoles.",
-                achievement: "Descubrió la ADN polimerasa del virus phi29, usada mundialmente para amplificar ADN en diagnósticos médicos, tests de paternidad y análisis forenses.",
-                image: "images/Margarita_Salas.png"
-            },
-            {
-                id: 7,
-                name: "Elena García Armada",
-                dates: "1971 - presente",
-                field: "Ingeniería Robótica",
-                bio: "Ingeniera española del CSIC, pionera mundial en robótica de rehabilitación. Creó el primer exoesqueleto pediátrico del mundo para niños con enfermedades neuromusculares.",
-                achievement: "Inventó ATLAS, el primer exoesqueleto biónico para niños con atrofia muscular espinal, permitiéndoles caminar por primera vez.",
-                image: "images/ElenaGarcia.png"
-            },
-            {
-                id: 8,
-                name: "Felisa Martín Bravo",
-                dates: "1898 - 1979",
-                field: "Física y Meteorología",
-                bio: "Primera mujer española en doctorarse en Física. Pionera en el estudio de la radiación solar y la meteorología en España, abriendo camino a las mujeres en la ciencia española.",
-                achievement: "Fue la primera científica española en trabajar en el Servicio Meteorológico Nacional, donde desarrolló investigaciones sobre radiación solar.",
-                image: "images/FelisaReyes.png"
-            }
-        ];
+      const scientists = [
+    {
+        id: 1,
+        name: "Ada Lovelace",
+        dates: "1815 - 1852",
+        field: "Matemáticas e Informática",
+        bio: "Matemática británica, considerada la primera programadora de la historia. Hija del poeta Lord Byron, trabajó con Charles Babbage en la Máquina Analítica y vio su potencial más allá del cálculo numérico.",
+        achievement: "Escribió el primer algoritmo diseñado para ser procesado por una máquina, anticipando la era de los ordenadores más de un siglo antes de que existieran.",
+        image: "images/Ada_Lovelace.png"
+    },
+    {
+        id: 2,
+        name: "Rosalind Franklin",
+        dates: "1920 - 1958",
+        field: "Química y Cristalografía",
+        bio: "Química británica cuyo trabajo fue fundamental para comprender la estructura del ADN. Experta en cristalografía de rayos X, su trabajo fue esencial pero no reconocido en vida.",
+        achievement: "Su famosa 'Fotografía 51' fue clave para descubrir la estructura de doble hélice del ADN, uno de los descubrimientos más importantes del siglo XX.",
+        image: "images/Rosalind.png"
+    },
+    {
+        id: 3,
+        name: "Hedy Lamarr",
+        dates: "1914 - 2000",
+        field: "Ingeniería e Invención",
+        bio: "Actriz e inventora austríaca-estadounidense. Además de su carrera en Hollywood, fue una brillante inventora autodidacta que desarrolló tecnología militar durante la Segunda Guerra Mundial.",
+        achievement: "Co-inventó el 'salto de frecuencia', tecnología base del WiFi, Bluetooth y GPS que usamos hoy en día. Fue reconocida con el Premio Pioneer de la Electronic Frontier Foundation.",
+        image: "images/HedyLamar.png"
+    },
+    {
+        id: 4,
+        name: "Jane Goodall",
+        dates: "1934 - 2025",
+        field: "Primatología y Conservación",
+        bio: "Primatóloga británica, la mayor experta mundial en chimpancés. Ha dedicado más de 60 años al estudio y conservación de estos animales en Tanzania, revolucionando nuestra comprensión de los primates.",
+        achievement: "Descubrió que los chimpancés fabrican y usan herramientas, cambiando para siempre nuestra comprensión de lo que nos diferencia como humanos.",
+        image: "images/JaneGodall.png"
+    },
+    {
+        id: 5,
+        name: "Katherine Johnson",
+        dates: "1918 - 2020",
+        field: "Matemáticas y Aeronáutica",
+        bio: "Matemática afroamericana que trabajó en la NASA superando barreras raciales y de género. Sus cálculos fueron esenciales para las primeras misiones espaciales de Estados Unidos.",
+        achievement: "Calculó las trayectorias de misiones espaciales clave y ayudó a que misiones históricas como el programa Mercury y el Apollo 11 llegaran a buen puerto.",
+        image: "images/KatherineJohnson.png"
+    },
+    {
+        id: 6,
+        name: "Margarita Salas",
+        dates: "1938 - 2019",
+        field: "Bioquímica y Biología Molecular",
+        bio: "Científica española, pionera de la biología molecular en España. Discípula de Severo Ochoa, dedicó su vida a la investigación del ADN y formó a generaciones de científicos españoles.",
+        achievement: "Descubrió la ADN polimerasa del virus phi29, usada mundialmente para amplificar ADN en diagnósticos médicos, tests de paternidad y análisis forenses.",
+        image: "images/Margarita_Salas.png"
+    },
+    {
+        id: 7,
+        name: "Elena García Armada",
+        dates: "1971 - presente",
+        field: "Ingeniería Robótica",
+        bio: "Ingeniera española del CSIC, pionera mundial en robótica de rehabilitación. Creó el primer exoesqueleto pediátrico del mundo para niños con enfermedades neuromusculares.",
+        achievement: "Inventó el primer exoesqueleto biónico pediátrico que ayuda a niños con problemas musculares a caminar y rehabilitarse.",
+        image: "images/ElenaGarcia.png"
+    },
+    {
+        id: 8,
+        name: "Felisa Martín Bravo",
+        dates: "1898 - 1979",
+        field: "Física y Meteorología",
+        bio: "Física española, una de las primeras mujeres en doctorarse en Física en España. Pionera en el estudio de la radiación solar y la meteorología, abriendo camino a las mujeres en la ciencia española.",
+        achievement: "Fue una de las primeras mujeres científicas en trabajar en el Servicio Meteorológico Nacional, donde desarrolló investigaciones sobre radiación solar.",
+        image: "images/FelisaReyes.png"
+    }
+];
+
 
         // Game state
         let cards = [];
