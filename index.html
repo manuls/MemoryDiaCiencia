@@ -177,6 +177,7 @@
             cursor: pointer;
             -webkit-user-select: none;
             user-select: none;
+            touch-action: manipulation;
         }
 
         .card-inner {
@@ -288,6 +289,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: var(--shadow-soft);
+            touch-action: manipulation;
         }
 
         .btn-primary {
@@ -766,8 +768,6 @@
                 </div>
             `;
 
-            card.addEventListener('click', () => flipCard(index));
-            
             return card;
         }
 
@@ -865,10 +865,40 @@
             });
         });
 
-        document.addEventListener('touchend', (e) => {
-            if (e.target.closest('.card') || e.target.closest('.btn')) {
+        // Mejor soporte táctil para Chrome/Windows
+        function handleInteraction(e) {
+            e.preventDefault();
+            const card = e.target.closest('.card');
+            if (card && card.dataset.index !== undefined) {
+                flipCard(parseInt(card.dataset.index));
+            }
+        }
+
+        // Eventos táctiles
+        gameBoard.addEventListener('touchstart', handleInteraction, { passive: false });
+        
+        // También click para ratón
+        gameBoard.addEventListener('click', (e) => {
+            const card = e.target.closest('.card');
+            if (card && card.dataset.index !== undefined) {
+                flipCard(parseInt(card.dataset.index));
+            }
+        });
+
+        // Prevenir zoom en doble tap
+        document.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 1) {
                 e.preventDefault();
             }
+        }, { passive: false });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
         }, { passive: false });
 
         initGame();
