@@ -1,3 +1,6 @@
+Index · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -626,8 +629,8 @@
     </div>
 
     <footer>
-        <p>Hecho por <a href="http://manuelquiroga.com">Manu Quiroga</a> con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
-        <p>Fundación Secretariado Gitano (c) 2026</p>
+        <p>Hecho con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
+        <p>FSG · Programa STEM</p>
     </footer>
 
     <script>
@@ -804,13 +807,9 @@
                 matchesDisplay.textContent = matchedPairs;
 
                 setTimeout(() => {
-                    showScientistInfo(card1.scientist);
+                    showScientistInfo(card1.scientist, matchedPairs === scientists.length);
                     flippedCards = [];
                     isLocked = false;
-
-                    if (matchedPairs === scientists.length) {
-                        setTimeout(showVictory, 500);
-                    }
                 }, 600);
             } else {
                 setTimeout(() => {
@@ -822,7 +821,10 @@
             }
         }
 
-        function showScientistInfo(scientist) {
+        let isLastMatch = false;
+
+        function showScientistInfo(scientist, isLast = false) {
+            isLastMatch = isLast;
             document.getElementById('modalImage').style.backgroundImage = `url('${scientist.image}')`;
             document.getElementById('modalName').textContent = scientist.name;
             document.getElementById('modalDates').textContent = scientist.dates;
@@ -840,6 +842,12 @@
 
         function closeModal(modal) {
             modal.classList.remove('active');
+            
+            // Si cerramos el modal de científica y era la última pareja, mostrar victoria
+            if (modal === scientistModal && isLastMatch) {
+                isLastMatch = false;
+                setTimeout(showVictory, 300);
+            }
         }
 
         // Event listeners
