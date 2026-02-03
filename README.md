@@ -16,28 +16,10 @@ JavaScript vanilla (sin dependencias)
 Google Fonts (Fredoka, Nunito)
 Vercel Analytics
 
-📁 Estructura del proyecto
-MemoryDiaCiencia/
-├── index.html          # Juego completo
-├── images/             # Ilustraciones de las científicas
-│   ├── Ada_Lovelace.png
-│   ├── ElenaGarcia.png
-│   ├── FelisaMartinBravo.png
-│   ├── FelisaReyes.png
-│   ├── HedyLamar.png
-│   ├── JaneGodall.png
-│   ├── KatherineJohnson.png
-│   ├── Margarita_Salas.png
-│   ├── Rosalind.png
-│   └── SaraGarciaAlonso.png
-└── README.md
 
-
-
-Actualiza el contador de parejas en el HTML (busca /10 y cámbialo por el nuevo total)
 
 📄 Licencia
 Este proyecto es de uso libre para fines educativos.
 👤 Autor
 Hecho con 💜 por Manu Quiroga
-Fundación Secretariado Gitano · Programa STEM · 2026
+Fundación Secretariado Gitano · 2026
