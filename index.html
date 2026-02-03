@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -89,12 +88,19 @@
             font-family: 'Fredoka', sans-serif;
             font-size: clamp(1.5rem, 5vw, 2.2rem);
             font-weight: 700;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             margin-bottom: 4px;
             line-height: 1.2;
+        }
+
+        /* Gradiente solo en pantallas grandes donde funciona bien */
+        @media (min-width: 768px) {
+            h1 {
+                background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
         }
 
         .subtitle {
