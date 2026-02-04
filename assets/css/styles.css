@@ -290,6 +290,7 @@ h1 {
     gap: 8px;
     box-shadow: var(--shadow-soft);
     touch-action: manipulation;
+   text-decoration: none; 
 }
 
 .btn-primary {
