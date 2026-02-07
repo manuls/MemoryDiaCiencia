@@ -130,6 +130,7 @@ const infoModal = document.getElementById('infoModal');
 const closeScientist = document.getElementById('closeScientist');
 const closeInfo = document.getElementById('closeInfo');
 const playAgainBtn = document.getElementById('playAgainBtn');
+const exploreBtn = document.getElementById('exploreBtn');
 
 // ==========================================================================
 // Funciones del juego
@@ -333,6 +334,10 @@ closeInfo.addEventListener('click', () => closeModal(infoModal));
 playAgainBtn.addEventListener('click', () => {
     closeModal(victoryModal);
     initGame();
+});
+
+exploreBtn.addEventListener('click', () => {
+    closeModal(victoryModal);
 });
 
 // Cerrar modal al hacer click fuera

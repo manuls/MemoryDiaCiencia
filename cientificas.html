@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Científicas - Memory: Mujeres en la Ciencia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .gallery-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Fredoka', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--secondary);
+            transform: translateX(-4px);
+        }
+
+        .scientist-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .scientist-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            animation: fadeIn 0.6s ease-out both;
+        }
+
+        .scientist-card:nth-child(2) { animation-delay: 0.05s; }
+        .scientist-card:nth-child(3) { animation-delay: 0.1s; }
+        .scientist-card:nth-child(4) { animation-delay: 0.15s; }
+        .scientist-card:nth-child(5) { animation-delay: 0.2s; }
+        .scientist-card:nth-child(6) { animation-delay: 0.25s; }
+        .scientist-card:nth-child(7) { animation-delay: 0.3s; }
+        .scientist-card:nth-child(8) { animation-delay: 0.35s; }
+        .scientist-card:nth-child(9) { animation-delay: 0.4s; }
+        .scientist-card:nth-child(10) { animation-delay: 0.45s; }
+
+        .scientist-photo {
+            width: 160px;
+            min-height: 200px;
+            background-size: cover;
+            background-position: center top;
+            flex-shrink: 0;
+            border-right: 4px solid var(--primary-light);
+        }
+
+        .scientist-info {
+            padding: 24px;
+            flex: 1;
+        }
+
+        .scientist-name {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+
+        .scientist-dates {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .scientist-field {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .scientist-bio {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .scientist-achievement {
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            padding: 12px 16px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+        }
+
+        .scientist-achievement-title {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+
+        .scientist-achievement-text {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .scientist-card {
+                flex-direction: column;
+            }
+
+            .scientist-photo {
+                width: 100%;
+                min-height: 220px;
+                border-right: none;
+                border-bottom: 4px solid var(--primary-light);
+            }
+
+            .scientist-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <a href="index.html" class="back-link">&larr; Volver al juego</a>
+
+        <header style="margin-bottom: 8px;">
+            <h1>Nuestras Científicas</h1>
+            <p class="subtitle">Conoce a las 10 mujeres que cambiaron el mundo con la ciencia</p>
+        </header>
+
+        <div class="scientist-grid">
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/Ada_Lovelace.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Ada Lovelace</h2>
+                    <p class="scientist-dates">1815 - 1852</p>
+                    <span class="scientist-field">Matemáticas e Informática</span>
+                    <p class="scientist-bio">Matemática británica, considerada la primera programadora de la historia. Hija del poeta Lord Byron, trabajó con Charles Babbage en la Máquina Analítica y vio su potencial más allá del cálculo numérico.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Escribió el primer algoritmo diseñado para ser procesado por una máquina, anticipando la era de los ordenadores más de un siglo antes de que existieran.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/Rosalind.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Rosalind Franklin</h2>
+                    <p class="scientist-dates">1920 - 1958</p>
+                    <span class="scientist-field">Química y Cristalografía</span>
+                    <p class="scientist-bio">Química británica cuyo trabajo fue fundamental para comprender la estructura del ADN. Experta en cristalografía de rayos X, su trabajo fue esencial pero no reconocido en vida.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Su famosa 'Fotografía 51' fue clave para descubrir la estructura de doble hélice del ADN, uno de los descubrimientos más importantes del siglo XX.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/HedyLamar.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Hedy Lamarr</h2>
+                    <p class="scientist-dates">1914 - 2000</p>
+                    <span class="scientist-field">Ingeniería e Invención</span>
+                    <p class="scientist-bio">Actriz e inventora austríaca-estadounidense. Además de su carrera en Hollywood, fue una brillante inventora autodidacta que desarrolló tecnología militar durante la Segunda Guerra Mundial.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Co-inventó el 'salto de frecuencia', tecnología base del WiFi, Bluetooth y GPS que usamos hoy en día. Fue reconocida con el Premio Pioneer de la Electronic Frontier Foundation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/JaneGodall.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Jane Goodall</h2>
+                    <p class="scientist-dates">1934 - 2025</p>
+                    <span class="scientist-field">Primatología y Conservación</span>
+                    <p class="scientist-bio">Primatóloga británica, la mayor experta mundial en chimpancés. Ha dedicado más de 60 años al estudio y conservación de estos animales en Tanzania, revolucionando nuestra comprensión de los primates.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Descubrió que los chimpancés fabrican y usan herramientas, cambiando para siempre nuestra comprensión de lo que nos diferencia como humanos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/KatherineJohnson.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Katherine Johnson</h2>
+                    <p class="scientist-dates">1918 - 2020</p>
+                    <span class="scientist-field">Matemáticas y Aeronáutica</span>
+                    <p class="scientist-bio">Matemática afroamericana que trabajó en la NASA superando barreras raciales y de género. Sus cálculos fueron esenciales para las primeras misiones espaciales de Estados Unidos.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Calculó las trayectorias de misiones espaciales clave y ayudó a que misiones históricas como el programa Mercury y el Apollo 11 llegaran a buen puerto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/Margarita_Salas.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Margarita Salas</h2>
+                    <p class="scientist-dates">1938 - 2019</p>
+                    <span class="scientist-field">Bioquímica y Biología Molecular</span>
+                    <p class="scientist-bio">Científica española, pionera de la biología molecular en España. Discípula de Severo Ochoa, dedicó su vida a la investigación del ADN y formó a generaciones de científicos españoles.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Descubrió la ADN polimerasa del virus phi29, usada mundialmente para amplificar ADN en diagnósticos médicos, tests de paternidad y análisis forenses.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/ElenaGarcia.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Elena García Armada</h2>
+                    <p class="scientist-dates">1971 - presente</p>
+                    <span class="scientist-field">Ingeniería Robótica</span>
+                    <p class="scientist-bio">Ingeniera española del CSIC, pionera mundial en robótica de rehabilitación. Creó el primer exoesqueleto pediátrico del mundo para niños con enfermedades neuromusculares.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Inventó el primer exoesqueleto biónico pediátrico que ayuda a niños con problemas musculares a caminar y rehabilitarse.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/FelisaReyes.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Felisa Reyes</h2>
+                    <p class="scientist-dates">1984 - presente</p>
+                    <span class="scientist-field">Química Orgánica</span>
+                    <p class="scientist-bio">Felisa Reyes Ortega es una científica española gitana, investigadora y profesora. Estudió Química con premio extraordinario, realizó investigación en el CSIC y se doctoró en 2013, rompiendo barreras para las mujeres gitanas en el mundo académico y científico.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">En 2013 se convirtió en la primera mujer gitana en doctorarse en Ciencias Naturales y Experimentales en España.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/FelisaMartinBravo.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Felisa Martín Bravo</h2>
+                    <p class="scientist-dates">1898 - 1979</p>
+                    <span class="scientist-field">Física y Meteorología</span>
+                    <p class="scientist-bio">Física española y pionera en meteorología. Fue una de las primeras mujeres en doctorarse en Física en España y desarrolló parte de su carrera científica en el ámbito del estudio de la radiación solar y la atmósfera, abriendo camino a las mujeres en la ciencia.</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Fue una de las primeras mujeres científicas en trabajar en el Servicio Meteorológico Nacional, donde realizó investigaciones sobre radiación solar aplicada a la meteorología.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scientist-card">
+                <div class="scientist-photo" style="background-image: url('images/SaraGarciaAlonso.png')"></div>
+                <div class="scientist-info">
+                    <h2 class="scientist-name">Sara García Alonso</h2>
+                    <p class="scientist-dates">1989 - presente</p>
+                    <span class="scientist-field">Biotecnología y Medicina</span>
+                    <p class="scientist-bio">Científica española especializada en biotecnología e investigación oncológica. Trabaja en el Centro Nacional de Investigaciones Oncológicas (CNIO) y en 2022 fue seleccionada como astronauta de reserva de la Agencia Espacial Europea (ESA).</p>
+                    <div class="scientist-achievement">
+                        <p class="scientist-achievement-title">&#127941; Logro destacado</p>
+                        <p class="scientist-achievement-text">Fue la primera mujer española seleccionada como astronauta de la ESA (astronauta de reserva), convirtiéndose en un referente para la ciencia y el espacio en España.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons" style="justify-content: center; margin-top: 32px; margin-bottom: 24px;">
+            <a href="index.html" class="btn btn-primary">
+                &#127918; Jugar ahora
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Hecho con &#128156; para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
+    </footer>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
