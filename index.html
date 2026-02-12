@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-title="page_title">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,19 +16,19 @@
 <body>
     <div class="container">
         <header>
-            <h1>🧬 Mujeres en la Ciencia</h1>
-            <p class="subtitle">11 de febrero · Día Internacional de la Mujer y la Niña en la Ciencia</p>
+            <h1 data-i18n="main_title">🧬 Mujeres en la Ciencia</h1>
+            <p class="subtitle" data-i18n="subtitle">11 de febrero · Día Internacional de la Mujer y la Niña en la Ciencia</p>
         </header>
 
         <div class="stats-bar">
             <div class="stat">
                 <span class="stat-icon">🎯</span>
-                <span>Movimientos:</span>
+                <span data-i18n="stats_moves">Movimientos:</span>
                 <span class="stat-value" id="moves">0</span>
             </div>
             <div class="stat">
                 <span class="stat-icon">🏆</span>
-                <span>Parejas:</span>
+                <span data-i18n="stats_pairs">Parejas:</span>
                 <span class="stat-value"><span id="matches">0</span>/10</span>
             </div>
         </div>
@@ -36,16 +36,16 @@
         <div class="game-board" id="gameBoard"></div>
 
         <div class="buttons">
-            <button class="btn btn-primary" id="resetBtn">
+            <button class="btn btn-primary" id="resetBtn" data-i18n="btn_reset">
                 🔄 Reiniciar
             </button>
-            <button class="btn btn-secondary" id="infoBtn">
+            <button class="btn btn-secondary" id="infoBtn" data-i18n="btn_howto">
                 ℹ️ Cómo jugar
             </button>
-            <a href="cientificas.html" class="btn btn-secondary">
+            <a href="cientificas.html" class="btn btn-secondary" data-i18n="btn_scientists">
                 👩‍🔬 Científicas
             </a>
-            <a href="about.html" class="btn btn-secondary">
+            <a href="about.html" class="btn btn-secondary" data-i18n="btn_about">
                 📖 Acerca de
             </a>
         </div>
@@ -61,12 +61,12 @@
                 <p class="modal-dates" id="modalDates"></p>
             </div>
             <div class="modal-body">
-                <p class="modal-field">Campo de estudio</p>
+                <p class="modal-field" data-i18n="modal_field_label">Campo de estudio</p>
                 <p class="modal-bio" id="modalField"></p>
-                <p class="modal-field">Biografía</p>
+                <p class="modal-field" data-i18n="modal_bio_label">Biografía</p>
                 <p class="modal-bio" id="modalBio"></p>
                 <div class="modal-achievement">
-                    <p class="modal-achievement-title">🏅 Logro destacado</p>
+                    <p class="modal-achievement-title" data-i18n="modal_achievement_label">🏅 Logro destacado</p>
                     <p class="modal-achievement-text" id="modalAchievement"></p>
                 </div>
             </div>
@@ -78,26 +78,26 @@
         <div class="modal">
             <div class="victory-content">
                 <div class="victory-icon">🎉</div>
-                <h2 class="victory-title">¡Felicidades!</h2>
-                <p class="victory-subtitle">Has encontrado todas las parejas</p>
+                <h2 class="victory-title" data-i18n="victory_title">¡Felicidades!</h2>
+                <p class="victory-subtitle" data-i18n="victory_subtitle">Has encontrado todas las parejas</p>
                 <div class="victory-stats">
                     <div class="victory-stat">
                         <div class="victory-stat-value" id="finalMoves">0</div>
-                        <div class="victory-stat-label">Movimientos</div>
+                        <div class="victory-stat-label" data-i18n="victory_stat_label">Movimientos</div>
                     </div>
                 </div>
-                <p class="victory-message">
+                <p class="victory-message" data-i18n="victory_message">
                     🌟 Has conocido a 10 mujeres increíbles que cambiaron el mundo con la ciencia.
                     ¡Tú también puedes ser una de ellas!
                 </p>
-                <p class="victory-explore">
+                <p class="victory-explore" data-i18n="victory_explore">
                     🔍 Puedes seguir explorando la información de las científicas pulsando sobre sus retratos en el tablero.
                 </p>
                 <div class="victory-buttons">
-                    <button class="btn btn-primary" id="exploreBtn">
+                    <button class="btn btn-primary" id="exploreBtn" data-i18n="btn_explore">
                         👩‍🔬 Ver científicas
                     </button>
-                    <button class="btn btn-secondary" id="playAgainBtn">
+                    <button class="btn btn-secondary" id="playAgainBtn" data-i18n="btn_play_again">
                         🔄 Jugar de nuevo
                     </button>
                 </div>
@@ -110,12 +110,12 @@
         <div class="modal">
             <div class="modal-header">
                 <button class="modal-close" id="closeInfo">✕</button>
-                <h2 class="modal-title" style="font-size: 1.8rem; margin-bottom: 2px;">Mujeres en la Ciencia</h2>
-                <p class="modal-dates">11 de febrero · Día Internacional de la Mujer y la Niña en la Ciencia</p>
-                <h2 class="modal-title" style="font-size: 1.2rem; margin-top: 16px;">Cómo jugar</h2>
+                <h2 class="modal-title" style="font-size: 1.8rem; margin-bottom: 2px;" data-i18n="howto_title">Mujeres en la Ciencia</h2>
+                <p class="modal-dates" data-i18n="howto_subtitle">11 de febrero · Día Internacional de la Mujer y la Niña en la Ciencia</p>
+                <h2 class="modal-title" style="font-size: 1.2rem; margin-top: 16px;" data-i18n="howto_heading">Cómo jugar</h2>
             </div>
             <div class="modal-body">
-                <p class="modal-bio">
+                <p class="modal-bio" data-i18n-html="howto_steps">
                     <strong>1.</strong> Toca una carta para voltearla y descubrir a una científica.<br><br>
                     <strong>2.</strong> Toca otra carta para buscar su pareja.<br><br>
                     <strong>3.</strong> Si las dos cartas son iguales, ¡encontraste una pareja! Aparecerá información sobre ella.<br><br>
@@ -123,8 +123,8 @@
                     <strong>5.</strong> Encuentra las 10 parejas para ganar.
                 </p>
                 <div class="modal-achievement">
-                    <p class="modal-achievement-title">💡 Consejo</p>
-                    <p class="modal-achievement-text">
+                    <p class="modal-achievement-title" data-i18n="howto_tip_title">💡 Consejo</p>
+                    <p class="modal-achievement-text" data-i18n="howto_tip">
                         ¡Presta atención y usa tu memoria! Cuantos menos movimientos hagas, mejor.
                     </p>
                 </div>
@@ -133,8 +133,8 @@
     </div>
 
     <footer>
-        <p>Hecho por <a href="http://manuelquiroga.com">Manu Quiroga</a> con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
-        <p>Fundación Secretariado Gitano - Sede Pontevedra</p>
+        <p data-i18n-html="footer_made_by">Hecho por <a href="http://manuelquiroga.com">Manu Quiroga</a> con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
+        <p data-i18n="footer_fsg">Fundación Secretariado Gitano - Sede Pontevedra</p>
         <p><a href="https://gitanos.org" alt="Fundación Secretariado Gitano"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLdJoPL_gKjaIKs9pFj-K1XUv6-83WNW62qg&s" width="100px" /></a></p>
         <p></p>
         <p></p>
@@ -143,6 +143,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 
     <!-- Vercel Analytics -->

@@ -757,3 +757,45 @@ footer strong {
             font-weight: 600;
             color: var(--text-dark);
         }
+
+/* --------------------------------------------------------------------------
+   Language Switcher
+   -------------------------------------------------------------------------- */
+.lang-switcher {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--primary-light);
+    color: var(--primary);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    background: var(--primary-light);
+    color: white;
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.lang-separator {
+    color: var(--primary-light);
+    font-weight: 600;
+    font-size: 0.85rem;
+    user-select: none;
+}

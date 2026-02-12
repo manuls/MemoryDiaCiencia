@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-title="page_title_about">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,78 +15,81 @@
 </head>
 <body>
     <div class="about-container">
-        <a href="index.html" class="back-link">← Volver al juego</a>
+        <a href="index.html" class="back-link" data-i18n="back_link">← Volver al juego</a>
 
         <header style="margin-bottom: 32px;">
-            <h1>Acerca de este proyecto</h1>
-            <p class="subtitle">Memory: Mujeres en la Ciencia</p>
+            <h1 data-i18n="about_title">Acerca de este proyecto</h1>
+            <p class="subtitle" data-i18n="about_subtitle">Memory: Mujeres en la Ciencia</p>
         </header>
 
         <div class="about-card">
-            <h2>🔬 El Juego</h2>
-            <p>
+            <h2 data-i18n="about_game_title">🔬 El Juego</h2>
+            <p data-i18n-html="about_game_p1">
                 <strong>Memory: Mujeres en la Ciencia</strong> es un juego educativo interactivo creado para celebrar el
                 <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong> (11 de febrero de 2026).
             </p>
-            <p>
+            <p data-i18n="about_game_p2">
                 El objetivo de este juego es dar visibilidad a mujeres científicas que han hecho contribuciones
                 fundamentales a la ciencia y la tecnología, muchas de ellas sin el reconocimiento que merecían
                 en su época.
             </p>
-            <p>
+            <p data-i18n="about_game_p3">
                 A través de un formato de juego de memoria clásico, las jugadoras pueden:
             </p>
             <ul>
-                <li>Conocer a 10 científicas extraordinarias de diferentes épocas y campos</li>
-                <li>Aprender sobre sus logros y contribuciones a la ciencia</li>
-                <li>Descubrir cómo estas mujeres cambiaron el mundo</li>
-                <li>Inspirarse para seguir sus pasos en el mundo de la ciencia</li>
+                <li data-i18n="about_game_li1">Conocer a 10 científicas extraordinarias de diferentes épocas y campos</li>
+                <li data-i18n="about_game_li2">Aprender sobre sus logros y contribuciones a la ciencia</li>
+                <li data-i18n="about_game_li3">Descubrir cómo estas mujeres cambiaron el mundo</li>
+                <li data-i18n="about_game_li4">Inspirarse para seguir sus pasos en el mundo de la ciencia</li>
             </ul>
         </div>
 
         <div class="about-card">
-            <h2>👤 El Autor</h2>
+            <h2 data-i18n="about_author_title">👤 El Autor</h2>
             <div class="author-info">
                 <div class="author-avatar">👨‍💻</div>
                 <div class="author-details">
                     <h3>Manu Quiroga</h3>
-                    <p>Desarrollador y educador digital</p>
+                    <p data-i18n="about_author_role">Desarrollador y educador digital</p>
                     <p><a href="http://manuelquiroga.com" target="_blank">manuelquiroga.com</a></p>
                 </div>
             </div>
-            <p>
+            <p data-i18n="about_author_text">
                 Este proyecto ha sido desarrollado dentro de las actividades del Día Internacional de la Niña y la Mujer en la Ciencia
-                de la Fundación Secretarido Gitano en su sede de Pontevedra. 
+                de la Fundación Secretariado Gitano en su sede de Pontevedra.
             </p>
         </div>
 
         <div class="about-card">
-            <h2>📜 Licencia</h2>
+            <h2 data-i18n="about_license_title">📜 Licencia</h2>
             <div class="license-box">
-                <h3>📄 MIT License</h3>
-                <p>
+                <h3 data-i18n="about_license_name">📄 MIT License</h3>
+                <p data-i18n="about_license_text">
                     Este proyecto es de código abierto y se distribuye bajo la licencia MIT.
                     Esto significa que puedes usar, copiar, modificar y distribuir este software
                     libremente, siempre que incluyas el aviso de copyright original.
                 </p>
             </div>
-            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-light);">
+            <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-light);" data-i18n="about_copyright">
                 Copyright © 2026 Manu Quiroga
             </p>
-            <p style="font-size: 0.9rem; color: var(--text-light);">
-                Las imágenes de las científicas son representaciones artísticas de imágenes de dominio público o promocionales. 
+            <p style="font-size: 0.9rem; color: var(--text-light);" data-i18n="about_images">
+                Las imágenes de las científicas son representaciones artísticas de imágenes de dominio público o promocionales.
             </p>
         </div>
 
         <div class="buttons" style="justify-content: center; margin-top: 32px;">
-            <a href="index.html" class="btn btn-primary">
+            <a href="index.html" class="btn btn-primary" data-i18n="btn_play_now">
                 🎮 Jugar ahora
             </a>
         </div>
     </div>
 
     <footer>
-        <p>Hecho por <a href="http://manuelquiroga.com">Manu Quiroga</a> con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
+        <p data-i18n-html="footer_made_by">Hecho por <a href="http://manuelquiroga.com">Manu Quiroga</a> con 💜 para el <strong>Día Internacional de la Mujer y la Niña en la Ciencia</strong></p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/i18n.js"></script>
 </body>
 </html>
