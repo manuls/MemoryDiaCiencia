@@ -293,7 +293,7 @@ const scientistTranslations = {
  * @returns {string} 'es' o 'gl'
  */
 function getLang() {
-    return localStorage.getItem('memoryLang') || 'es';
+    return localStorage.getItem('memoryLang') || 'gl';
 }
 
 /**
@@ -377,9 +377,9 @@ function createLangSwitcher() {
     const switcher = document.createElement('div');
     switcher.className = 'lang-switcher';
     switcher.innerHTML = `
-        <button class="lang-btn" data-lang="es">ES</button>
-        <span class="lang-separator">|</span>
         <button class="lang-btn" data-lang="gl">GL</button>
+        <span class="lang-separator">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
     `;
 
     container.insertBefore(switcher, container.firstChild);
