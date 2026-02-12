@@ -258,12 +258,13 @@ function checkMatch() {
  */
 function showScientistInfo(scientist, isLast = false) {
     isLastMatch = isLast;
+    const data = typeof getScientistData === 'function' ? getScientistData(scientist) : scientist;
     document.getElementById('modalImage').style.backgroundImage = `url('${scientist.image}')`;
     document.getElementById('modalName').textContent = scientist.name;
     document.getElementById('modalDates').textContent = scientist.dates;
-    document.getElementById('modalField').textContent = scientist.field;
-    document.getElementById('modalBio').textContent = scientist.bio;
-    document.getElementById('modalAchievement').textContent = scientist.achievement;
+    document.getElementById('modalField').textContent = data.field;
+    document.getElementById('modalBio').textContent = data.bio;
+    document.getElementById('modalAchievement').textContent = data.achievement;
 
     scientistModal.classList.add('active');
 }
